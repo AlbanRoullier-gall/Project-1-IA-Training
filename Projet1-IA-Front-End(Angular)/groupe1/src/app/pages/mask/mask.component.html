@@ -1,0 +1,22 @@
+
+<nb-card><nb-card-body><h2>Mask detection</h2></nb-card-body></nb-card>
+<div class="row" style="margin-bottom: 100px;">
+    <div class="col-lg-6 col-md-12">
+        <form  >
+            <div class="row" style="margin-bottom: 100px;">
+                <input nbInput (change)="fileChange($event)" type="file">
+            </div>
+            <div class="row" style="margin-bottom: 100px;">
+                <input nbInput type="submit" (click)="submit()">
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <img *ngIf="objectURL" [src]="objectURL">
+    </div>
+
+
+</div>
+
+
+

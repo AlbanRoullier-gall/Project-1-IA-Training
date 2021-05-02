@@ -1,0 +1,297 @@
+<nb-card>
+  <nb-card-body>
+    <nb-stepper orientation="vertical">
+      <nb-step label="Step 1">
+        <h4>Step 1</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Import of the main libraries and loading of the dataset
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            First, we import the libraries to use. And put the csv files paths.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="\assets\imgs\cars_img\first_step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton disabled nbStepperNext>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 2">
+        <h4>Step 2</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Convertion into a dataframe
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            We create a list with the csv paths files.
+            <br />
+            We concat all the csv files path into a dataframe what can read and
+            convert the table csv.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/second_step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 3">
+        <h4>Step 3</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">Statistic 1</h3></nb-card-header
+          >
+          <nb-card-body>
+            We establish first observations:
+            <br />
+            The trends of prices compared on the brands
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/third-step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 4">
+        <h4>Step 4</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">Statistic 2</h3></nb-card-header
+          >
+          <nb-card-body>
+            The trends of fuel compared on the brands
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/fourth_step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 5">
+        <h4>Step 5</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">Statistic 3</h3></nb-card-header
+          >
+          <nb-card-body> Rapport of the general statistics. </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/fifth-step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 6">
+        <h4>Step 6</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Conversion of the categorical variables
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            Creation of a list by the object's type
+            <br />
+            Showing of the categorical features
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/sixth-step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 7">
+        <h4>Step 7</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Number of the different sections into the categorical variables
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            Using of the categorical list and of the functionnality unique to
+            show each section of the feature.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/seventh-step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 8">
+        <h4>Step 8</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Conversion of the categorical variables
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            We convert all the categorical variable to do our analysis model
+            later.
+            <br />
+            We use the dummies functionnality to arrange all the different
+            sections categorical with as much numerical variables than there are
+            the different sections.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/eigth-step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 9">
+        <h4>Step 9</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Counting of the missing values by features
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            We use the functionnality isnull what show us the variables what
+            have null values. And use the functionnality sum to determine the
+            count for all the features.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/ninth-step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 10">
+        <h4>Step 10</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Simple Imputer
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            We use the fillna functionnality to cover all the nan and null
+            values of the features. And we use the functionnality mean to
+            replace them by the mean value of each feature.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/tenth-step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 11">
+        <h4>Step 11</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Feature Engineering : Deleting of the aberrant values and
+              Conversion of the unities of the features
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            We transform all the unities of the features into the dataframe.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/eleventh-step.png" />
+          </nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 12">
+        <h4>Step 12</h4>
+        <nb-card status="warning">
+          <nb-card-header>
+            <h3 style="color: darkslateblue">
+              Target, Train, Test Split and Standardization
+            </h3>
+          </nb-card-header>
+          <nb-card-body>
+            We import the libraries StandardScaler, train_test_split
+            <br />
+            We define the tagret in y and the features in X.
+            <br />
+            And we put the variables in the train and test sets. With the size
+            of the each set.
+          </nb-card-body>
+          <nb-card-footer>
+            <img src="/assets/imgs/cars_img/twelfth-step.png" />
+          </nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 13">
+        <h4>Step 13</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">GridSearchCV</h3></nb-card-header
+          >
+          <nb-card-body>
+            We run the functionnality GridSearchCV to find the best hyperparams
+            of the randomforest model.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/thirteenth-step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 14">
+        <h4>Step 14</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              RandomForest model
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            We import the functionnality RandomForestRegressor.
+            <br />
+            We param the model with the gridsearch's params.
+            <br />
+            We train the model with the functionnality fit and the set of train.
+            <br />
+            And we run the trained model on the test set with the functionnality
+            predict.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/fourteenth-step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 15">
+        <h4>Step 15</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Dumping of the model
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            We store our model in a repository container
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/cars_img/fifteenth-step.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton disabled nbStepperNext>next</button>
+      </nb-step>
+    </nb-stepper>
+  </nb-card-body>
+</nb-card>

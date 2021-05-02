@@ -1,0 +1,320 @@
+<nb-card>
+  <nb-card-body>
+    <nb-stepper orientation="vertical">
+      <nb-step label="Step 1">
+        <h4>Step 1</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Loading of the dataset
+            </h3></nb-card-header
+          >
+          <nb-card-body> We load the paths of the csv files </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask1.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton disabled nbStepperNext>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 2">
+        <h4>Step 2</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Import of the libraries
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            We import all the necessery libraries.
+            <br />
+            These days, convnets are rarely trained from scratch. More often, we
+            reuse the base of a pretrained model. To the pretrained base we then
+            attach an untrained head. In other words, we reuse the part of a
+            network that has already learned to do 1. Extract features, and
+            attach to it some fresh layers to learn 2. Classify.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask2.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 3">
+        <h4>Step 3</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Preprocessing on the set of data in real-time + Pipeline of the
+              pictures preprocessing generation into a defined set. Splitting
+              presentation.
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            The functionality ImageDataGenerator generates batches of tensor
+            image data with real-time data augmentation.
+            <br />
+            The functionality horizontal_flip returns boolean and randomly flips
+            inputs horizontally.
+            <br />
+            The functionality rescale rescales factor by defaults to none and if
+            none or 0, no rescaling is applied, otherwise we multiply the data
+            by the value provided (after applying all other transformations).
+            <br />
+            The functionality flow_from_directory allows to parameter the sets.
+            <br />
+            The functionality target_size scales the picutres.
+            <br />
+            The functionality seed is an optional random seed for shuffling and
+            transformations.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask3.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 4">
+        <h4>Step 4</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Showing some images
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            mapping of classes with their key-value with the functionality
+            items.
+            <br />
+            fetching items with iteration of key-values with the functionality
+            iter.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask4.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 5">
+        <h4>Step 5</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              VGG19 model initialisation and configuration
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            Initialisation of the layers with flattening flatten in input and
+            determination about the number of layers and activation
+            functionality Dense in output.
+            <br />
+            The functionality Flatten transforms the two dimensional outputs of
+            the base into the one dimensional inputs needed by the head.
+            <br />
+            The functionality Dense(2,activation) determine the number of layers
+            (2) with the numbers of neurons or units (2) and the function of
+            activation (sigmoïd)
+            <br />
+            The sigmoïd activation produces class probabilities, it gets the
+            final class prediction, we define a threshold probability. Typically
+            this will be 0.5, so that rounding will give us the correct class:
+            below 0.5 means the class with label 0 and 0.5 or above means the
+            class with label 1.
+            <br />
+            model.compile allows to train the data. It allows to make to learn
+            the neural network. the loss function measures the acuracy of the
+            predictions and guides for finding the corrects values. It
+            determines the disparity between the target's true values and the
+            target's false values . the optimizer determine how to change the
+            weights. It adjusts the weights to minimize te loss. The algorithms
+            use the stochastic gradient descent. There 3 steps: sampling of
+            training data and running model for predictions, measuring the loss,
+            adjusting the weights with a direction for the smallest loss. the
+            learning rate and the size of the minibatchs(a set into the training
+            data) are important to hyperparameter. Adam has an adapative
+            learning rate algorithm.
+            <br />
+            The functionality BinaryCrossentropy() is a sort of measure for the
+            distance from one probability distribution to another.the changes
+            are smoothly not in jumps.
+            <br />
+            The functionality metrics.BinaryAccuracy calculates how often
+            predictions match binary labels. This metric creates two local
+            variables, total and count that are used to compute the frequency
+            with which y_pred matches y_true. This frequency is ultimately
+            returned as binary accuracy: an idempotent operation that simply
+            divides total by count. If sample_weight is None, weights default to
+            1. Use sample_weight of 0 to mask values.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask5.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 6">
+        <h4>Step 6</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Presentation of the networks model
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            Using of the functionality summary to provide the displaying of
+            model.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask6.png" />
+          </nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 6">
+        <h4>Step 6BIS</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Complexity's improvement of the model by the simplicity
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            The functionality keras.callbacks.EarlyStopping stops training when
+            a monitored metric has stopped improving. To reduce the learning on
+            the noise. Early stopping the short gap between the two learnings
+            curves and the point before that the validation learning curves
+            rises. The EarlyStopping function is a callback function, it runs
+            every so often while the network trains, after every epoch. monitor:
+            quantity to be monitored, patience determine the number of Epochs
+            before stopping, mode:max:: mode it will stop when the quantity
+            monitored has stopped increasing, restore_best_weights:Whether to
+            restore model weights from the epoch with the best value of the
+            monitored quantity. The EarlyStopping function is a callback
+            function, it runs every so often while the network trains, after
+            every epoch. monitor: quantity to be monitored, patience determine
+            the number of Epochs before stopping, mode:max:: mode it will stop
+            when the quantity monitored has stopped increasing,
+            restore_best_weights:Whether to restore model weights from the epoch
+            with the best value of the monitored quantity.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/Step6bis.png" />
+          </nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 7">
+        <h4>Step 7</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Presentation of the Complexity's improvement of the model and
+              Training 1
+            </h3></nb-card-header
+          >
+          <nb-card-body> </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask7.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 8">
+        <h4>Step 8</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Presentation of the Complexity's improvement of the model and
+              Training 2
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            We want that the gap on the learninng curves between the validation
+            data and training data be short. The learning curves about the
+            training data determine signal and noise. The learning curves about
+            the Validation data determine the signal only. Underfitting -> not
+            enough signal Overfitting -> too much noise
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask8.png" />
+            <img src="/assets/imgs/mask_img/step8bis.png" />
+          </nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 9">
+        <h4>Step 9</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              New Hyperparametrisation
+            </h3></nb-card-header
+          >
+          <nb-card-body> </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask9.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 10">
+        <h4>Step 10</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Presentation loss and metrics value of the model for the test set
+            </h3></nb-card-header
+          >
+          <nb-card-body> </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask10.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 11">
+        <h4>Step 11</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">Model Saving</h3></nb-card-header
+          >
+          <nb-card-body> We save the model in a file h5py. </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask11.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Step 12">
+        <h4>Step 11</h4>
+        <nb-card status="warning">
+          <nb-card-header
+            ><h3 style="color: darkslateblue">
+              Treatment on the pictures
+            </h3></nb-card-header
+          >
+          <nb-card-body>
+            We choice the Haarcascade model for the detection of the faces.
+            We'll applicate the model for the masks into the model Haarcascade.
+          </nb-card-body>
+          <nb-card-footer
+            ><img src="/assets/imgs/mask_img/stepmask12.png"
+          /></nb-card-footer>
+        </nb-card>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton disabled nbStepperNext>next</button>
+      </nb-step>
+    </nb-stepper>
+  </nb-card-body>
+</nb-card>

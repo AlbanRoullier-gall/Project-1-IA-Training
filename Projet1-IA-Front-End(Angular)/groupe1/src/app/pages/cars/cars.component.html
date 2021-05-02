@@ -1,0 +1,133 @@
+
+    <nb-card><nb-card-body><h2>Car Estimation</h2></nb-card-body></nb-card>
+    <div class="row">
+        <div class="col-lg-6 col-md-12">
+            <nb-card>
+                <nb-card-header><h3>Form:</h3> </nb-card-header>
+                <nb-card-body>
+    
+                    <form [formGroup]="fg" (ngSubmit)="submit()">
+         
+                        <div class="div-row">
+                            <div style="margin-right: 20px;">
+                            <nb-select placeholder="Select your brand" formControlName="marque" >
+                                
+                                <nb-option *ngFor="let carmodel of carModels | keyvalue" [value]="carmodel.key">{{carmodel.key}}</nb-option>
+            
+                            </nb-select>
+                        </div>
+    
+                        <div>
+                            <nb-select placeholder="Select your model"  formControlName="model" >
+                                
+                                <nb-option *ngFor="let model of carModels[fg.value.marque]" [value]="model">{{model}}</nb-option>
+   
+                            </nb-select>
+                        </div>
+                        <div>
+                            <input type="number" nbInput fullWidth status="primary" formControlName="year" placeholder="Enter year of car" style="margin-left: 20px  ;">
+                        </div>
+                        </div>
+
+
+                        <div class="div-row">
+                                                
+                            <div class="form-group" style="margin-top: 10px;">
+                                <div  style="margin: 20px;">
+                                    <i class="fas fa-gas-pump"style="margin: 10px"></i><label>Fuel</label>
+                                </div>
+                                <nb-radio-group formControlName="gasoil" name="gasoil">
+                                    <nb-radio
+                                    *ngFor="let option of options"
+                                    [value]="option.value">
+                                    {{ option.label }} 
+                                    </nb-radio> 
+                                </nb-radio-group>
+                            </div>
+                            <!-- <label>Transmission</label>         -->
+                            <!-- <div class="div-trans">
+                                
+                                <div class="div-element">
+                                    <label>Manual</label>
+                                    <div class="form-group">
+                                        <nb-checkbox ></nb-checkbox>
+                                    </div>
+                                </div>
+                
+                                <div class="div-element">
+                                    <label>Automatic</label>
+                                    <div class="form-group">
+                                        <nb-checkbox ></nb-checkbox>
+                                    </div>
+                                </div>
+
+                                <div class="div-element">
+                                    <label> Semi-Auto</label>
+                                    <div class="form-group">
+                                        <nb-checkbox ></nb-checkbox>
+                                    </div>
+                                </div>
+
+                                <div class="div-element">
+                                    <label> Other</label>
+                                    <div class="form-group">
+                                        <nb-checkbox ></nb-checkbox>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            
+                        
+                            <div class="form-group" style="margin-top: 10px;margin-left: 100px;">
+                                <div  style="margin: 20px;">
+                                    <i class="fas fa-gas-pump"style="margin: 10px"></i><label>Transmission</label>
+                                </div>
+                                <nb-radio-group formControlName="transmission" name="transmission">
+                                    <nb-radio
+                                    *ngFor="let option of transmissions"
+                                    [value]="option.value">
+                                    {{ option.label }} 
+                                    </nb-radio> 
+                                </nb-radio-group>
+                            </div>
+                        </div>
+    
+                        <div class="div-row">
+                            <div style="margin-top: 20px;">
+                                
+                                <input type="number" nbInput fullWidth status="primary" formControlName="kilometers" placeholder="Enter your Kilometers"style="margin-bottom: 10px;">
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <input type="number" nbInput fullWidth status="primary" formControlName="tax" placeholder="Enter your Tax"style="margin-bottom: 10px;">
+                            </div>
+                            <div style="margin-top: 20px;">
+                                
+                                <input type="number" nbInput fullWidth status="primary" formControlName="l_100km" placeholder="Enter L/100kms"style="margin-bottom: 10px;">
+                            </div>
+                            <div style="margin-top: 20px;">
+                                
+                                <input type="number" nbInput fullWidth status="primary" formControlName="engineSize" placeholder="Enter Engine Size"style="margin-bottom: 10px;">
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <button status="info" nbButton [disabled]="fg.invalid">Calculate</button>  
+                        </div>
+                    </form>
+                </nb-card-body>
+              
+              </nb-card>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <nb-card>
+                <nb-card-header><h3>Estimation :</h3></nb-card-header>
+                <nb-card-body>
+                    <!-- <h1 *ngIf="response != null">{{response}}}</h1> -->
+                    <h1>{{response | number : '0.2-2'}}</h1>
+                    
+                   
+                </nb-card-body>
+              </nb-card>
+        </div>
+    </div>
+

@@ -1,0 +1,170 @@
+
+<nb-card >
+    <nb-card-body>
+      <nb-stepper orientation="vertical" >
+        <nb-step label="Step 1" >
+          <h4>Step 1</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Import of the main libraries and loading of the dataset</h3></nb-card-header>
+            <nb-card-body>
+              We import the main libraries to analyze and process the dataset.<br>
+              We load the dataset as a ".csv" file in a variable to make a dataframe.
+           </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\importscsv.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton disabled nbStepperNext>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 2">
+          <h4>Step 2</h4>
+            <nb-card status="warning">
+              <nb-card-header><h3 style="color: darkslateblue">Dataset observation</h3></nb-card-header>
+              <nb-card-body>
+                We observe the present data of our dataset in the form of a dataframe.<br>
+                Using the default data.head() function, we can see the first 5 records of our dataframe and the columns corresponding to each data.
+                
+              </nb-card-body>
+              <nb-card-footer><img src="\assets\imgs\avc_img\datasetdepart.PNG" ></nb-card-footer>
+            </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 3">
+          <h4>Step 3</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Presence of missing values in the dataset</h3></nb-card-header>
+            <nb-card-body>
+              We observe that our dataset contains missing data.<br>
+              We choose to replace for each of the missing values by the average value corresponding to the column.<br>
+              This is done so that you don't have to delete these records to continue operating them.
+              
+            </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\valeursnull.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 4">
+          <h4>Step 4</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Replacement of missing values</h3></nb-card-header>
+            <nb-card-body>
+              The dataset no longer contains any missing values.<br>
+              These have been replaced by the average of their corresponding column.
+            </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\valeursnullesmoyenne.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 5">
+          <h4>Step 5</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Observation of the number of unique data</h3></nb-card-header>
+            <nb-card-body>
+              
+              We observe the number of unique data for each column.
+            </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\nuniquevals.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 6">
+          <h4>Step 6</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Observation of unique values in the columns</h3></nb-card-header>
+            <nb-card-body>
+              We observe the different values in the columns.
+            </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\uniquesvalscol.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 7">
+          <h4>Step 7</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Removal of non-essential columns</h3></nb-card-header>
+            <nb-card-body>
+              We delete the columns that are not necessary for our study.<br>
+              We prefer to focus on the medical data.
+              
+            </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\drop_columns.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 8">
+          <h4>Step 8</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Train Test Split</h3></nb-card-header>
+            <nb-card-body>
+              Now that the preprocessing phase is over.<br>
+              Our data is cleaned and ready to be used.<br> 
+              We separate our data that will allow the training of our model from those that will be used for testing.
+              
+            </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\traintestsplit1.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 9">
+          <h4>Step 9</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Logistic Regression</h3></nb-card-header>
+            <nb-card-body>
+              We create a logistic regression model and train it with our data.
+              
+            </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\LogisReg.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 10">
+          <h4>Step 10</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Decision Tree</h3></nb-card-header>
+            <nb-card-body>
+              We create a decision tree model and train it with our data.
+              
+            </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\decisiontree.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 11">
+          <h4>Step 11</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Random Forest Classifier</h3></nb-card-header>
+            <nb-card-body>
+              We create a random forest classifier model and train it with our data.
+              
+            </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\RandomForest1.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Step 12">
+          <h4>Step 12</h4>
+          <nb-card status="warning">
+            <nb-card-header><h3 style="color: darkslateblue">Model Selection</h3></nb-card-header>
+            <nb-card-body>
+            In order to obtain the best predictions for our problem.<br>
+            We compare the results of the confusion matrices of each model.<br>
+            This will allow us to choose our model which will allow us to make our predictions on our future tests.
+              
+            </nb-card-body>
+            <nb-card-footer><img src="\assets\imgs\avc_img\ModelSelection.PNG" ></nb-card-footer>
+          </nb-card>
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton disabled nbStepperNext>next</button>
+        </nb-step>
+      </nb-stepper>
+    </nb-card-body>
+</nb-card>

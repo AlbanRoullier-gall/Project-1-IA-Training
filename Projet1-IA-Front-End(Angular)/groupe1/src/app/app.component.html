@@ -1,0 +1,23 @@
+
+<nb-layout>
+
+  <nb-layout-header fixed>
+    <nb-icon icon="menu" (click)="toggle()" style='margin-right: 20px;'></nb-icon>
+    <img src="\assets\imgs\logo.png" with="50" height="50" style="margin-right: 30px;"/>
+    
+    <h1>Artificial intelligence project</h1>
+  </nb-layout-header>
+
+  <nb-sidebar [state]="state">
+    <nb-menu [items]="items"></nb-menu>
+  </nb-sidebar>
+  <nb-layout-column>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+  
+
+  <nb-layout-footer fixed>
+  <!-- Insert footer here -->
+  </nb-layout-footer>
+
+</nb-layout>
